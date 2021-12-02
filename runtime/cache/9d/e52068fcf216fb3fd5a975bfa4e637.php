@@ -1,4 +1,0 @@
-<?php
-//000000003600
- exit();?>
-a:26:{s:7:"vod_all";i:362;s:9:"vod_today";i:28;s:7:"vod_min";d:1;s:7:"art_min";d:0;s:10:"type_all_4";i:25;s:10:"type_all_0";i:362;s:10:"type_all_3";i:25;s:10:"type_all_1";i:212;s:10:"type_all_5";i:25;s:10:"type_all_2";i:25;s:10:"type_all_7";i:25;s:10:"type_all_6";i:25;s:12:"type_today_1";i:28;s:12:"type_today_0";i:28;s:9:"topic_all";i:4;s:11:"topic_today";i:0;s:9:"tpoic_min";d:1;s:9:"actor_all";i:5;s:11:"actor_today";i:0;s:9:"actor_min";d:1;s:8:"role_all";i:0;s:10:"role_today";i:0;s:8:"role_min";d:0;s:11:"website_all";i:0;s:13:"website_today";i:0;s:11:"website_min";d:0;}
