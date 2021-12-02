@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<title>视频标签-{$maccms.site_name}</title>
+		<meta name="keywords" content="{$maccms.site_keywords}" />
+		<meta name="description" content="{$maccms.site_description}" />
+		{include file="system/include"}
+	</head>
+	<body>
+		{include file="system/headtop"}
+		<div class="container">
+		{include file="system/search"}
+		{include file="system/headmeun"}
+<div class="content">
+	<div class="main-content">
+		<div class="main-container">
+			<div class="headline">
+				<h1>标签</h1>
+
+			</div>
+			<div class="box">
+				<div class="list-tags">
+					<div class="margin-fix">
+						<ul class="item" id="mdym">
+						{maccms:vod order="desc" by="time" num="10000000000000" ids="all" type="all"}
+						{if condition="$vo.vod_tag eq ''"}
+						{else}
+						{$vo.vod_tag|mac_url_create='tag'}
+						{/if}
+						{/maccms:vod}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+			{include file="module/footer_ad"}
+		</div>
+		{include file="system/footer"}
+		<script>
+			$(document).ready(function() {
+				$(function(){
+					var json = {};
+					var $div = $("#mdym");
+					var $diva = $div.find("a");
+					$diva.each(function(){
+						var key = $(this).html();
+						json[key] = key;
+					});
+					$div.empty();
+					for(var key in json){
+						$div.append("<li><a href='/index.php/vod/search/tag/"+key+".html' style='font-weight: bold; font-size: 15px;'>"+key+"</a></li>");
+					}   
+				})
+			})
+		</script>
+	</body>
+</html>
